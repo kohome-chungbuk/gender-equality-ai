@@ -40,7 +40,7 @@
   <div class="shell">
     <nav>
       <a class="brand" href="#"><span class="mark">충</span><span>노동조합 양성평등위원회 충북지부</span></a>
-      <div class="navlinks"><a href="#about">위원회 소개</a><a href="#guide">상담 안내</a><a href="#rights">권리 자료</a></div>
+      <div class="navlinks"><a href="#chat" onclick="openTopic('위원회 소개')">위원회 소개</a><a href="#chat" onclick="openTopic('성희롱·성폭력')">상담 안내</a><a href="#chat" onclick="openTopic('관련 규정')">권리 자료</a></div>
       <span><a class="gpt-link" href="https://chatgpt.com/g/g-6a7a6e0ad58481919551eaed63379e86-yangseongpyeongdeung-aiege-muleoboseyo" target="_blank" rel="noopener">기존 GPT ↗</a><button class="nav-cta" onclick="focusChat()">온라인 안내 시작</button></span>
     </nav>
     <main>
@@ -51,7 +51,7 @@
         <div class="actions"><button class="primary" onclick="focusChat()">안내 메뉴 보기 →</button><button class="ghost" onclick="ask('상담 내용은 어떻게 보호되나요?')">안내 원칙 보기</button></div>
         <div class="trust"><span><b>✓</b> 익명 이용</span><span><b>✓</b> 대화 저장 안 함</span><span><b>✓</b> 노조 상담 연결</span></div>
       </section>
-      <section class="chat-wrap" aria-label="노동조합 양성평등위원회 충북지부 온라인 안내">
+      <section class="chat-wrap" id="chat" aria-label="노동조합 양성평등위원회 충북지부 온라인 안내">
         <div class="halo"></div><div class="dots"></div>
         <div class="chat">
           <div class="chat-head"><div class="avatar">충북</div><div class="who"><b>노동조합 양성평등위원회 충북지부</b><small>조합원을 위한 온라인 정보 안내</small></div><span class="online" title="온라인"></span></div>
@@ -119,6 +119,7 @@
     function ask(text){add(text,'user');answer(text)}
     function send(e){e.preventDefault();const i=document.getElementById('input');const v=i.value.trim();if(!v)return;ask(v);i.value=''}
     function showTopic(name){document.querySelectorAll('.topic').forEach(b=>b.classList.toggle('active',b.textContent===name));const c=document.getElementById('chips');c.innerHTML='';menu[name].forEach(q=>{const b=document.createElement('button');b.className='chip';b.textContent=q[0];b.onclick=()=>ask(q[0]);c.appendChild(b)})}
+    function openTopic(name){showTopic(name);setTimeout(()=>document.getElementById('chat').scrollIntoView({behavior:'smooth',block:'center'}),20)}
     const topicBox=document.getElementById('topics');Object.keys(menu).forEach((name,i)=>{const b=document.createElement('button');b.className='topic'+(i?'':' active');b.textContent=name;b.onclick=()=>showTopic(name);topicBox.appendChild(b)});showTopic(Object.keys(menu)[0]);
   </script>
 </body>
