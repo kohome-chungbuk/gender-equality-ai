@@ -15,7 +15,7 @@
     .shell{min-height:100vh;overflow:hidden;background:radial-gradient(circle at 3% 12%,#e5f5c9 0,transparent 25%),radial-gradient(circle at 86% 2%,#ccece4 0,transparent 26%),var(--paper)}
     nav{height:78px;max-width:1180px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.4px}.mark{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#fff;border:1px solid #e2ebe6;box-shadow:0 5px 15px rgba(13,93,76,.09);overflow:hidden}.mark img{width:39px;height:39px;object-fit:contain;display:block}
-    .navlinks{display:flex;gap:30px;color:#48645c;font-size:14px;font-weight:600}.nav-cta{background:var(--blue);color:white;border:0;border-radius:999px;padding:11px 18px;font-weight:700;box-shadow:0 6px 16px rgba(8,125,187,.18)}
+    .navlinks{display:flex;gap:30px;color:#48645c;font-size:14px;font-weight:600}.navlinks button{border:0;background:transparent;color:inherit;padding:8px 0;font-weight:inherit}.navlinks button:hover{color:var(--green);text-decoration:underline;text-underline-offset:5px}.nav-cta{background:var(--blue);color:white;border:0;border-radius:999px;padding:11px 18px;font-weight:700;box-shadow:0 6px 16px rgba(8,125,187,.18)}
     main{max-width:1280px;margin:0 auto;padding:54px 24px 76px;display:grid;grid-template-columns:1fr 570px;align-items:center;gap:58px;min-height:calc(100vh - 78px)}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#eff8e4;border:1px solid #d8eabb;border-radius:999px;padding:7px 12px;color:#416320;font-size:13px;font-weight:700}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--green2);box-shadow:0 0 0 4px #e3f3c6}
     h1{font-family:"Gowun Batang",serif;font-size:clamp(48px,6vw,76px);line-height:1.12;letter-spacing:-3px;margin:24px 0 20px;font-weight:700}.brush{position:relative;white-space:nowrap;color:var(--green)}.brush:after{content:"";position:absolute;left:-2%;right:-3%;bottom:4px;height:13px;background:linear-gradient(90deg,#e5f4ba,#ffe0c8);z-index:-1;border-radius:60% 38% 44% 48%;transform:rotate(-1.5deg)}
@@ -43,7 +43,7 @@
   <div class="shell">
     <nav>
       <a class="brand" href="#"><span class="mark"><img src="union-symbol.png" alt="주택관리공단노동조합 심볼"></span><span>노동조합 양성평등위원회 충북지부</span></a>
-      <div class="navlinks"><a href="#chat" onclick="openTopic('양성평등위원회')">위원회 소개</a><a href="#chat" onclick="openTopic('성희롱·성폭력 예방 및 대응')">상담 안내</a><a href="#chat" onclick="openTopic('관련 법령·공단 규정')">권리 자료</a></div>
+      <div class="navlinks" aria-label="주요 안내"><button type="button" onclick="openModal('committee')">위원회 소개</button><button type="button" onclick="openModal('consulting')">상담 안내</button><button type="button" onclick="openModal('rights')">권리 자료</button></div>
       <span><a class="gpt-link" href="https://chatgpt.com/g/g-6a7a6e0ad58481919551eaed63379e86-yangseongpyeongdeung-aiege-muleoboseyo" target="_blank" rel="noopener">기존 GPT ↗</a><button class="nav-cta" onclick="focusChat()">온라인 안내 시작</button></span>
     </nav>
     <main>
@@ -153,6 +153,9 @@
     function ask(text,topicHint=''){add(text,'user');answer(text,topicHint)}
     function send(e){e.preventDefault();const i=document.getElementById('input');const v=i.value.trim();if(!v)return;ask(v);i.value=''}
     const popupInfo={
+      committee:{title:'위원회 소개',body:'노동조합 양성평등위원회는 모든 조합원이 존중받고 차별 없이 일할 수 있는 근무환경을 만드는 것을 목표로 활동합니다.\n\n주요 활동\n• 일·가정 양립과 근무여건 개선\n• 존중과 배려의 조직문화 조성\n• 육아휴직·가족돌봄제도 활용 지원\n• 조합원의 의견을 모아 개선과제 제안\n\n2026년 운영자료 기준 본사와 전국 각 지부를 대표하는 위원 등 총 14명으로 구성되어 있으며, 충북지부 양성평등위원은 김민 위원입니다.',note:'양성평등은 특정 성별만을 위한 것이 아니라 모든 조합원이 차별 없이 일하기 위한 기본적인 권리입니다.'},
+      consulting:{title:'상담 안내',body:'다음과 같은 문제의 절차와 지원 정보를 확인할 수 있습니다.\n\n• 직장 내 성희롱·성폭력\n• 직장 내 괴롭힘, 욕설·폭언, 따돌림\n• 임신·출산·육아와 가족돌봄 제도\n• 휴게시간, 퇴근 후 지시, 회식 강요 등 조직문화\n\n2026년 2월 11일 기준(충북지사) 성희롱·성폭력 고충상담원\n• 충북지사 이순애(3급)\n• 충주연수2 양대준(4급)\n• 제천장락1 유미르(5급)\n\n상담 전에는 발생 시기·장소·내용을 정리하고 관련 자료의 원본을 보존해 주세요.',note:'이 사이트는 정보 안내용이며 정식 상담·신고 접수창구가 아닙니다. 긴급한 보호가 필요하면 고충상담원 또는 노동조합에 직접 알려 주세요.'},
+      rights:{title:'권리 자료',body:'사이트의 ‘관련 법령·공단 규정’ 메뉴에서 다음 자료의 주요 내용을 확인할 수 있습니다.\n\n• 성희롱·성폭력 예방지침\n• 직장 내 괴롭힘 예방·대응지침\n• 임신·출산·육아 관련 취업규칙\n• 가족돌봄 관련 공단 제도\n• 익명신고 및 신고자 보호 관련 제도\n\n아래 온라인 안내 화면에서 ‘관련 법령·공단 규정’을 선택한 뒤 확인하려는 자료를 누르면 상세 내용이 표시됩니다.',note:'법령과 공단 규정은 개정될 수 있으므로 제도 신청·상담·신고 전 최신 규정과 담당부서 안내를 다시 확인해 주세요.'},
       contact:{title:'고충상담원 확인',body:'2026년 2월 11일 기준(충북지사)\n\n• 충북지사 이순애(3급)\n• 충주연수2 양대준(4급)\n• 제천장락1 유미르(5급)\n\n피해자 또는 대리인은 서면·전화·통신·방문 등의 방법으로 고충상담을 신청할 수 있습니다.',note:'인사이동 등으로 담당자가 변경될 수 있으므로 실제 상담 전에는 최신 명단을 확인해 주세요.'},
       union:{title:'노조 문의 안내',body:'조직문화와 제도 개선 의견은 다음 담당자에게 말씀해 주세요.\n\n• 충북지부 유미르 지부장: 내선 5125\n• 양성평등위원회 김민 위원: 내선 5192\n\n불편한 상황, 발생 시기, 반복 여부와 원하는 개선방안을 함께 알려주시면 검토에 도움이 됩니다.',note:'긴급한 피해나 공식 조사가 필요한 사안은 고충상담 또는 신고절차를 함께 확인해야 합니다.'},
       protection:{title:'보호조치 안내',body:'상담 시 비밀유지와 함께 필요한 보호조치를 요청할 수 있습니다.\n\n• 행위자와의 즉시 분리\n• 근무장소 변경 또는 배치전환\n• 접촉 제한\n• 유급휴가 등 필요한 조치\n\n원하는 조치와 현재 상황의 긴급성을 고충상담원에게 구체적으로 알려 주세요.',note:'실제 적용 가능한 보호조치는 사건과 근무 상황, 관련 규정에 따라 확인해야 합니다.'}
