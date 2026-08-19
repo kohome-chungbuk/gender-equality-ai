@@ -30,10 +30,12 @@
     .chips{padding:0 18px 12px;display:flex;gap:8px;overflow:auto;scrollbar-width:thin}.chip{white-space:nowrap;border:1px solid #c8ddd6;background:#f7fbf9;color:var(--green);border-radius:999px;padding:9px 12px;font-size:12px;font-weight:700}.chip:hover{background:var(--mint)}
     .source{margin-top:8px;padding-top:8px;border-top:1px solid rgba(62,105,92,.16);font-size:10px;color:#71847e}.gpt-link{color:var(--green);font-weight:700;font-size:12px;margin-right:5px}.gpt-link:hover{text-decoration:underline}
     .composer{border-top:1px solid #e7ede9;padding:14px 16px 16px;display:flex;gap:9px}.composer input{min-width:0;flex:1;border:1px solid #d8e3de;background:#f8faf9;border-radius:14px;padding:13px 14px;outline:none;color:var(--ink)}.composer input:focus{border-color:#70a597;box-shadow:0 0 0 3px #e4f2ed}.send{width:45px;border:0;border-radius:14px;background:var(--green);color:white;font-size:20px}
+    .quick-actions{position:relative;z-index:3;width:calc(100% - 46px);margin:14px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick-actions button{border:1px solid #cfe0da;background:#f8fcfa;color:#28594b;border-radius:12px;padding:10px 7px;font-size:11px;font-weight:800}.quick-actions button:hover{background:var(--mint)}
     .notice{position:relative;z-index:3;width:calc(100% - 46px);margin:15px auto 0;background:#fff;border:1px solid #e0e8e3;box-shadow:0 9px 24px rgba(21,49,42,.09);border-radius:16px;padding:13px 16px;font-size:12px;color:#597069;display:flex;gap:9px;align-items:center}.notice b{display:block;color:var(--ink);margin-bottom:2px}.lock{font-size:19px}
+    .site-foot{max-width:1180px;margin:0 auto;padding:0 24px 28px;color:#6b7c77;font-size:11px;line-height:1.7;text-align:center}.site-foot strong{color:#3a554d}.site-foot span{display:block}
     @keyframes pop{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}@keyframes bounce{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}
     @media(max-width:900px){.navlinks{display:none}main{grid-template-columns:minmax(0,1fr);padding-top:36px;gap:62px}.hero{text-align:center;min-width:0}.lead{margin:auto}.actions,.trust{justify-content:center}.chat-wrap{max-width:570px;width:100%;min-width:0;margin:auto}h1{letter-spacing:-2px}}
-    @media(max-width:560px){nav{height:auto;min-height:72px;width:100%;padding:10px 14px;gap:8px}.brand{min-width:0;gap:8px;flex:1}.mark{width:40px;height:40px;border-radius:12px;flex:0 0 40px}.mark img{width:34px;height:34px}.brand span:last-child{font-size:12px;line-height:1.3;max-width:150px;word-break:keep-all}.gpt-link{display:none}.nav-cta{font-size:11px;line-height:1.2;padding:9px 10px;max-width:76px;white-space:normal}main{width:100%;padding:30px 14px 42px;gap:42px}.hero{width:100%;overflow:hidden}.eyebrow{font-size:11px;padding:6px 10px}h1{font-size:40px;line-height:1.15;letter-spacing:-1.5px;margin:20px 0 16px}.brush{white-space:normal}.lead{width:100%;max-width:100%;font-size:15px;line-height:1.65;padding:0 2px;word-break:keep-all;overflow-wrap:anywhere}.actions{width:100%;align-items:stretch;flex-direction:column;gap:10px;margin:26px 0}.primary,.ghost{width:100%;padding:15px 14px}.trust{width:100%;gap:8px 14px;flex-wrap:wrap;font-size:11px}.chat-wrap{width:100%;max-width:100%}.chat{width:100%;height:650px;border-radius:22px}.chat-head{padding:14px 15px;gap:10px}.avatar{width:46px;height:46px;border-radius:14px;flex-basis:46px}.avatar img{width:40px;height:40px}.who{min-width:0}.who b{font-size:13px;line-height:1.3;word-break:keep-all}.who small{font-size:11px}.messages{padding:16px 12px;gap:12px}.msg{max-width:94%;font-size:13px;line-height:1.72;padding:13px 14px}.msg.long{max-width:100%;font-size:12px;line-height:1.8}.msg.guide{max-width:100%;font-size:12px;line-height:1.75}.topics,.chips{padding-left:12px;padding-right:12px}.composer{padding:11px}.composer input{font-size:13px}.notice{width:calc(100% - 16px);font-size:11px;padding:11px 12px}.halo{inset:-12px}.dots{display:none}}
+    @media(max-width:560px){nav{height:auto;min-height:72px;width:100%;padding:10px 14px;gap:8px}.brand{min-width:0;gap:8px;flex:1}.mark{width:40px;height:40px;border-radius:12px;flex:0 0 40px}.mark img{width:34px;height:34px}.brand span:last-child{font-size:12px;line-height:1.3;max-width:150px;word-break:keep-all}.gpt-link{display:none}.nav-cta{font-size:11px;line-height:1.2;padding:9px 10px;max-width:76px;white-space:normal}main{width:100%;padding:30px 14px 42px;gap:42px}.hero{width:100%;overflow:hidden}.eyebrow{font-size:11px;padding:6px 10px}h1{font-size:40px;line-height:1.15;letter-spacing:-1.5px;margin:20px 0 16px}.brush{white-space:normal}.lead{width:100%;max-width:100%;font-size:15px;line-height:1.65;padding:0 2px;word-break:keep-all;overflow-wrap:anywhere}.actions{width:100%;align-items:stretch;flex-direction:column;gap:10px;margin:26px 0}.primary,.ghost{width:100%;padding:15px 14px}.trust{width:100%;gap:8px 14px;flex-wrap:wrap;font-size:11px}.chat-wrap{width:100%;max-width:100%}.chat{width:100%;height:650px;border-radius:22px}.chat-head{padding:14px 15px;gap:10px}.avatar{width:46px;height:46px;border-radius:14px;flex-basis:46px}.avatar img{width:40px;height:40px}.who{min-width:0}.who b{font-size:13px;line-height:1.3;word-break:keep-all}.who small{font-size:11px}.messages{padding:16px 12px;gap:12px}.msg{max-width:94%;font-size:13px;line-height:1.72;padding:13px 14px}.msg.long{max-width:100%;font-size:12px;line-height:1.8}.msg.guide{max-width:100%;font-size:12px;line-height:1.75}.topics,.chips{padding-left:12px;padding-right:12px}.composer{padding:11px}.composer input{font-size:12px}.quick-actions,.notice{width:calc(100% - 16px)}.quick-actions{gap:5px}.quick-actions button{font-size:10px;padding:9px 4px}.notice{font-size:11px;padding:11px 12px}.site-foot{padding:0 18px 24px}.halo{inset:-12px}.dots{display:none}}
   </style>
 </head>
 <body>
@@ -49,7 +51,7 @@
         <h1>함께 만드는<br><span class="brush">행복한 일터</span></h1>
         <p class="lead">직장 내 성차별, 성희롱, 임신·출산·돌봄 문제에 관한 정보를 확인하세요. <strong>노동조합 양성평등위원회 충북지부</strong>가 필요한 제도와 상담 절차를 안내합니다.</p>
         <div class="actions"><button class="primary" onclick="focusChat()">안내 메뉴 보기 →</button><button class="ghost" onclick="ask('상담 내용은 어떻게 보호되나요?')">안내 원칙 보기</button></div>
-        <div class="trust"><span><b>✓</b> 익명 이용</span><span><b>✓</b> 대화 저장 안 함</span><span><b>✓</b> 노조 상담 연결</span></div>
+        <div class="trust"><span><b>✓</b> 로그인 없이 이용</span><span><b>✓</b> 입력 내용 전송·저장 안 함</span><span><b>✓</b> 노조 상담 안내</span></div>
       </section>
       <section class="chat-wrap" id="chat" aria-label="노동조합 양성평등위원회 충북지부 온라인 안내">
         <div class="halo"></div><div class="dots"></div>
@@ -62,11 +64,13 @@
           <div class="typing" id="typing"><i></i><i></i><i></i></div>
           <div class="topics" id="topics"></div>
           <div class="chips" id="chips"></div>
-          <form class="composer" onsubmit="send(event)"><input id="input" autocomplete="off" aria-label="상담 내용" placeholder="무엇이든 편하게 물어보세요" /><button class="send" aria-label="보내기">↑</button></form>
+          <form class="composer" onsubmit="send(event)"><input id="input" autocomplete="off" aria-label="안내 검색어" placeholder="메뉴를 선택하거나 핵심 단어를 입력해 주세요" /><button class="send" aria-label="보내기">↑</button></form>
         </div>
-        <div class="notice"><span class="lock">🔒</span><span><b>안심하고 이야기하세요</b>이 화면의 대화는 브라우저를 닫으면 사라져요.</span></div>
+        <div class="quick-actions" aria-label="상담 바로가기"><button onclick="quickContact()">고충상담원 확인</button><button onclick="quickUnion()">노조 문의 안내</button><button onclick="quickProtection()">보호조치 안내</button></div>
+        <div class="notice"><span class="lock">🔒</span><span><b>개인정보를 입력하지 마세요</b>입력 내용은 서버로 전송하거나 저장하지 않으며, 브라우저를 닫으면 사라집니다. 이 화면은 정식 신고 접수창구가 아닙니다.</span></div>
       </section>
     </main>
+    <footer class="site-foot"><strong>최종 업데이트: 2026년 8월 19일</strong><span>본 사이트는 정보 안내용이며 구체적인 사건 판단이나 법률 자문을 대신하지 않습니다. 제도 신청·상담·신고 전 최신 공단 규정과 담당자 안내를 확인해 주세요.</span></footer>
   </div>
   <script src="regulations.js"></script>
   <script>
@@ -125,9 +129,24 @@
     };
     function focusChat(){document.querySelector('.chat-wrap').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>document.getElementById('input').focus(),500)}
     function add(text, cls, source=''){const d=document.createElement('div');d.className='msg '+cls;d.textContent=text;if(source){const s=document.createElement('div');s.className='source';s.textContent='근거 자료 · '+source;d.appendChild(s)}document.getElementById('messages').appendChild(d);document.getElementById('messages').scrollTop=9999}
-    function answer(text,topicHint=''){let found=null,topic=topicHint;if(topicHint&&menu[topicHint])found=menu[topicHint].find(x=>x[0]===text)||null;if(!found){outer:for(const [name,items] of Object.entries(menu)){for(const x of items){if(x[0]===text||text.includes(x[0].replace(/[?·]/g,''))){found=x;topic=name;break outer}}}}let reply=found?found[1]:'입력하신 내용과 정확히 일치하는 고정답변은 아직 없습니다. 위 세부 메뉴에서 질문을 선택해 주세요. 이 도구는 안내용이며, 구체적 사건의 판단이나 법률 자문을 대신하지 않습니다.';const t=document.getElementById('typing');t.style.display='block';setTimeout(()=>{t.style.display='none';add(reply,'bot'+(topic==='관련 법령·공단 규정'?' long':''),found?found[2]:'');if(found&&detailGuide[topic])setTimeout(()=>add(detailGuide[topic],'bot guide'),120)},500)}
+    const keywordLinks=[
+      [['성희롱','성폭력','성적 농담','신체접촉'],'성희롱·성폭력 예방 및 대응','직장 내 성희롱은 어떻게 판단하나요?'],
+      [['괴롭힘','폭언','욕설','따돌림','업무배제','심부름'],'직장 내 괴롭힘 및 고충상담','직장 내 괴롭힘이란?'],
+      [['상담원','상담 어디','신고 어디','고충상담'],'성희롱·성폭력 예방 및 대응','어디에 상담하나요?'],
+      [['육아휴직','육아기','근로시간 단축'],'임신·출산·육아 관련 제도','육아기 근로시간 단축은?'],
+      [['출산휴가','출산전후휴가'],'임신·출산·육아 관련 제도','출산전후휴가는 며칠인가요?'],
+      [['배우자 출산'],'임신·출산·육아 관련 제도','배우자 출산휴가는 며칠인가요?'],
+      [['가족돌봄','돌봄휴가'],'임신·출산·육아 관련 제도','가족돌봄휴가·근로시간 단축은?'],
+      [['회식','술자리'],'일·가정 양립 및 조직문화','회식 참여를 강요할 수 있나요?'],
+      [['점심','휴게시간'],'일·가정 양립 및 조직문화','점심시간 업무지시는?'],
+      [['퇴근 후','퇴근후'],'일·가정 양립 및 조직문화','퇴근 후 업무지시는?']
+    ];
+    function answer(text,topicHint=''){let found=null,topic=topicHint;if(topicHint&&menu[topicHint])found=menu[topicHint].find(x=>x[0]===text)||null;if(!found){outer:for(const [name,items] of Object.entries(menu)){for(const x of items){if(x[0]===text||text.includes(x[0].replace(/[?·]/g,''))){found=x;topic=name;break outer}}}}if(!found){const normalized=text.replace(/\s+/g,' ').toLowerCase();const link=keywordLinks.find(([words])=>words.some(word=>normalized.includes(word.toLowerCase())));if(link){topic=link[1];found=menu[topic].find(x=>x[0]===link[2])||null;showTopic(topic)}}let reply=found?found[1]:'입력한 내용에 맞는 고정답변을 찾지 못했습니다. 이름·연락처 등 개인정보는 입력하지 말고, 위의 분야와 질문 메뉴에서 가장 가까운 항목을 선택해 주세요. 이 도구는 안내용이며 정식 신고 접수나 법률 자문을 대신하지 않습니다.';const t=document.getElementById('typing');t.style.display='block';setTimeout(()=>{t.style.display='none';add(reply,'bot'+(topic==='관련 법령·공단 규정'?' long':''),found?found[2]:'');if(found&&detailGuide[topic])setTimeout(()=>add(detailGuide[topic],'bot guide'),120)},500)}
     function ask(text,topicHint=''){add(text,'user');answer(text,topicHint)}
     function send(e){e.preventDefault();const i=document.getElementById('input');const v=i.value.trim();if(!v)return;ask(v);i.value=''}
+    function quickContact(){openTopic('성희롱·성폭력 예방 및 대응');ask('어디에 상담하나요?','성희롱·성폭력 예방 및 대응')}
+    function quickUnion(){openTopic('노동조합과 양성평등 활동');ask('개선 의견을 제안할 수 있나요?','노동조합과 양성평등 활동')}
+    function quickProtection(){add('보호조치에는 무엇이 있나요?','user');setTimeout(()=>add('상담 시 비밀유지와 함께 행위자와의 분리, 근무장소 변경, 배치전환, 접촉 제한, 유급휴가 등 필요한 보호조치를 요청할 수 있습니다. 원하는 조치와 현재의 긴급성을 고충상담원에게 구체적으로 알려 주세요. 실제 적용 가능한 조치는 사건과 근무 상황, 관련 규정에 따라 확인해야 합니다.','bot','성희롱·성폭력 예방지침 및 직장 내 괴롭힘 예방·대응지침'),300)}
     function showTopic(name){document.querySelectorAll('.topic').forEach(b=>b.classList.toggle('active',b.textContent===name));const c=document.getElementById('chips');c.innerHTML='';menu[name].forEach(q=>{const b=document.createElement('button');b.className='chip';b.textContent=q[0];b.onclick=()=>ask(q[0],name);c.appendChild(b)})}
     function openTopic(name){showTopic(name);setTimeout(()=>document.getElementById('chat').scrollIntoView({behavior:'smooth',block:'center'}),20)}
     const topicBox=document.getElementById('topics');Object.keys(menu).forEach((name,i)=>{const b=document.createElement('button');b.className='topic'+(i?'':' active');b.textContent=name;b.onclick=()=>showTopic(name);topicBox.appendChild(b)});showTopic(Object.keys(menu)[0]);
